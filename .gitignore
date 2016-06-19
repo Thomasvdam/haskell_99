@@ -1,0 +1,6 @@
+.DS_store
+
+problem_*
+!problem_*.*
+*.o
+*.hi
