@@ -5,7 +5,7 @@
 all: clean
 
 clean:
-	find . -type f -not -name '*.hs' -not -name 'Makefile' -not -name 'README.MD' -not -path './.git/*' | xargs rm -f
+	find . -type f -not -name '*.hs' -not -name 'Makefile' -not -name 'README.md' -not -name '.gitignore' -not -path './.git/*' | xargs rm -f
 
 build:
 	if [ -z "$P" ]; then echo "Usage: make $P=n build/run.\n"; exit; fi; ghc problem_$P.hs
