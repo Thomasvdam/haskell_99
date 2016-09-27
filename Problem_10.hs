@@ -1,8 +1,12 @@
 -- Run-length encoding. Pack elements in tuples listing their length.
 
-import Problem_9
+import Data.List
 
---myEncode :: (Eq a) => [a] -> [(a, Int)]
+myCount :: [a] -> (a, Int)
+myCount x = (head x, length x)
 
-main = print(myPack "aaa")
+myEncode :: (Eq a) => [a] -> [(a, Int)]
+myEncode = map myCount . group
+
+main = print(myEncode "aaaaaaBBBBBcccDDJADHSJKASSSSSSSk")
 
